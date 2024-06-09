@@ -1,20 +1,75 @@
-# The Algorithms - Java
+# Report for Assignment 1
 
-[![Build](https://github.com/TheAlgorithms/Java/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/TheAlgorithms/Java/actions/workflows/build.yml)
-[![codecov](https://codecov.io/gh/TheAlgorithms/Java/graph/badge.svg?token=XAdPyqTIqR)](https://codecov.io/gh/TheAlgorithms/Java)
-[![Discord chat](https://img.shields.io/discord/808045925556682782.svg?logo=discord&colorB=7289DA&style=flat-square)](https://discord.gg/c7MnfGFGa6)
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/TheAlgorithms/Java)
+## Project chosen
 
+Name: Java Algorithms
 
-You can run and edit the algorithms, or contribute to them using Gitpod.io (a free online development environment) with a single click.
+URL: (Our own) https://github.com/cz23in/algorithms (Original) https://github.com/TheAlgorithms/Java
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/TheAlgorithms/Java)
+Number of lines of code and the tool used to count it: 40601 counted with CLOC
 
-### All algorithms are implemented in Java (for educational purposes)
-These implementations are intended for learning purposes. As such, they may be less efficient than the Java standard library.
+Programming language: Java
 
-## Contribution Guidelines
-Please read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute to this project.
+## Coverage measurement
 
-## Algorithms
-Our [directory](DIRECTORY.md) has the full list of applications.
+### Existing tool
+
+<Inform the name of the existing tool that was executed and how it was executed>
+
+<Show the coverage results provided by the existing tool with a screenshot>
+
+### Your own coverage tool
+
+<The following is supposed to be repeated for each group member>
+
+<Group member name>
+
+<Function 1 name>
+
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+
+<Provide a screenshot of the coverage results output by the instrumentation>
+
+<Function 2 name>
+
+<Provide the same kind of information provided for Function 1>
+
+## Coverage improvement
+
+### Individual tests
+
+<The following is supposed to be repeated for each group member>
+
+<Group member name>
+
+<Test 1>
+
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+
+<Provide a screenshot of the old coverage results (the same as you already showed above)>
+
+<Provide a screenshot of the new coverage results>
+
+<State the coverage improvement with a number and elaborate on why the coverage is improved>
+
+<Test 2>
+
+<Provide the same kind of information provided for Test 1>
+
+Adam Atchia
+
+Test 1: ```testHowManyTimesRotated```
+
+![](coverage_screenshots/original.png)
+
+To work on
+
+### Overall
+
+<Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
+
+<Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
+
+## Statement of individual contributions
+
+<Write what each group member did>
