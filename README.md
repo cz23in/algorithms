@@ -34,6 +34,14 @@ Programming language: Java
 
 <Provide the same kind of information provided for Function 1>
 
+Adam Atchia
+
+```HowManyTimesRotated.rotated```
+
+https://github.com/cz23in/algorithms/commit/cf4db03aff7a10914858adac5313b8dd874c6117
+
+![](coverage_screenshots/adam_own_tool_function_1.png)
+
 ## Coverage improvement
 
 ### Individual tests
