@@ -42,3 +42,6 @@ local.properties
 gradle.properties
 .vscode
 *.log
+
+
+htmlReport/
