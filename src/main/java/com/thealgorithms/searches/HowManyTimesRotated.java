@@ -1,5 +1,6 @@
 package com.thealgorithms.searches;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 /*
@@ -42,18 +43,40 @@ final class HowManyTimesRotated {
     }
 
     public static int rotated(int[] a) {
+        HashMap<String, Boolean> coverage_map = new HashMap<String, Boolean>();
+        coverage_map.put("main", false);
+        coverage_map.put("main.while1", false);
+        coverage_map.put("main.while1.if1", false);
+        coverage_map.put("main.while1.if2", false);
+        coverage_map.put("main.while1.if3", false);
+        int result = rotated_wrapper(a, coverage_map);
+        for (HashMap.Entry<String, Boolean> entry : coverage_map.entrySet()) {
+            String key = entry.getKey();
+            boolean value = entry.getValue();
+            System.out.println("Branch: " + key + ", Reached: " + value);
+        }
+        return result;
+    }
+
+    public static int rotated_wrapper(int[] a, HashMap<String, Boolean> coverage_map) {
+        coverage_map.put("main", true);
+
         int low = 0;
         int high = a.length - 1;
         int mid = 0; // low + (high-low)/2 = (low + high)/2
 
         while (low <= high) {
+            coverage_map.put("main.while1", true);
             mid = low + (high - low) / 2;
 
             if (a[mid] < a[mid - 1] && a[mid] < a[mid + 1]) {
+                coverage_map.put("main.while1.if1", true);
                 break;
             } else if (a[mid] > a[mid - 1] && a[mid] < a[mid + 1]) {
+                coverage_map.put("main.while1.if2", true);
                 high = mid + 1;
             } else if (a[mid] > a[mid - 1] && a[mid] > a[mid + 1]) {
+                coverage_map.put("main.while1.if3", true);
                 low = mid - 1;
             }
         }
