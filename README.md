@@ -21,7 +21,7 @@ mvn clean test jacoco:report
 
 
 the coverage results provided by the existing tool is generated in the target/site/jacoco directory.
-![image](https://github.com/cz23in/algorithms/assets/89585937/4e5e6482-49d2-470e-b817-2a1fd34553c4)
+![](coverage_screenshots/jacoco.jpg)
 
 
 ### Your own coverage tool
@@ -47,6 +47,17 @@ Adam Atchia
 https://github.com/cz23in/algorithms/commit/cf4db03aff7a10914858adac5313b8dd874c6117
 
 ![](coverage_screenshots/adam_own_tool_function_1.png)
+
+
+Rui Gao
+
+Function 1 name: findKthMax
+![](coverage_screenshots/Rui_function1.jpg)
+
+<Function 2 name>
+
+<Provide the same kind of information provided for Function 1>
+
 
 ## Coverage improvement
 

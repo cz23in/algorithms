@@ -1,6 +1,8 @@
 package com.thealgorithms.maths;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -11,8 +13,10 @@ public final class FindKthNumber {
     }
 
     private static final Random RANDOM = new Random();
+    private static final Map<String, Boolean> coverageMap = new HashMap<>();
 
     public static void main(String[] args) {
+        initializeCoverageMap();
         /* generate an array with random size and random elements */
         int[] nums = generateArray(100);
 
@@ -28,6 +32,15 @@ public final class FindKthNumber {
         Arrays.sort(nums);
         assert nums[kthMaxIndex] == targetMax;
         assert nums[kthMinIndex] == targetMin;
+
+        printCoverageResults();
+    }
+
+    private static void initializeCoverageMap() {
+        coverageMap.put("while_loop.1", false);
+        coverageMap.put("while.if.1", false);
+        coverageMap.put("while.if.2", false);
+        coverageMap.put("while.if.3", false);
     }
 
     private static int[] generateArray(int capacity) {
@@ -44,12 +57,16 @@ public final class FindKthNumber {
         int start = 0;
         int end = nums.length;
         while (start < end) {
+            coverageMap.put("while_loop.1", true);
             int pivot = partition(nums, start, end);
             if (k == pivot) {
+                coverageMap.put("while.if.1", true);
                 return nums[pivot];
             } else if (k > pivot) {
+                coverageMap.put("while.if.2", true);
                 start = pivot + 1;
             } else {
+                coverageMap.put("while.if.3", true);
                 end = pivot;
             }
         }
@@ -73,5 +90,12 @@ public final class FindKthNumber {
         int tmp = nums[a];
         nums[a] = nums[b];
         nums[b] = tmp;
+    }
+
+    private static void printCoverageResults() {
+        System.out.println("Coverage Results:");
+        for (Map.Entry<String, Boolean> entry : coverageMap.entrySet()) {
+            System.out.println("Branhc: " + entry.getKey() + " Reached: " + entry.getValue());
+        }
     }
 }
