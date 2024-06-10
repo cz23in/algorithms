@@ -99,7 +99,7 @@ public final class FindKthNumber {
     private static void printCoverageResults() {
         System.out.println("Coverage Results:");
         for (Map.Entry<String, Boolean> entry : coverageMap.entrySet()) {
-            System.out.println("Branhc: " + entry.getKey() + " Reached: " + entry.getValue());
+            System.out.println("Branch: " + entry.getKey() + " Reached: " + entry.getValue());
         }
     }
 }
