@@ -41,6 +41,8 @@ public final class FindKthNumber {
         coverageMap.put("while.if.1", false);
         coverageMap.put("while.if.2", false);
         coverageMap.put("while.if.3", false);
+        coverageMap.put("for_loop.1", false);
+        coverageMap.put("for_loop.if.1", false);
     }
 
     private static int[] generateArray(int capacity) {
@@ -77,7 +79,9 @@ public final class FindKthNumber {
         int pivot = nums[start];
         int j = start;
         for (int i = start + 1; i < end; i++) {
+            coverageMap.put("for_loop.1", true);
             if (nums[i] < pivot) {
+                coverageMap.put("for_loop.if.1", true);
                 j++;
                 swap(nums, i, j);
             }

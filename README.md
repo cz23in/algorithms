@@ -52,9 +52,11 @@ https://github.com/cz23in/algorithms/commit/cf4db03aff7a10914858adac5313b8dd874c
 Rui Gao
 
 Function 1 name: findKthMax
+https://github.com/cz23in/algorithms/commit/28ed48d52d7253c67a2eb2cabfb395d8b56355de#diff-da29792920db2b60923338a5dfb1aa3ffc49101330eeec20554be3f4cfcf8735
 ![](coverage_screenshots/Rui_function1.jpg)
 
 <Function 2 name>
+![](coverage_screenshots/Rui_function2.jpg)
 
 <Provide the same kind of information provided for Function 1>
 
