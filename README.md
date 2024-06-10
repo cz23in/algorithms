@@ -26,20 +26,6 @@ the coverage results provided by the existing tool is generated in the target/si
 
 ### Your own coverage tool
 
-<The following is supposed to be repeated for each group member>
-
-<Group member name>
-
-<Function 1 name>
-
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
-
-<Provide a screenshot of the coverage results output by the instrumentation>
-
-<Function 2 name>
-
-<Provide the same kind of information provided for Function 1>
-
 Adam Atchia
 
 ```HowManyTimesRotated.rotated```
@@ -49,22 +35,23 @@ https://github.com/cz23in/algorithms/commit/cf4db03aff7a10914858adac5313b8dd874c
 ![](coverage_screenshots/adam_own_tool_function_1.png)
 
 
-Rui Gao
+### Rui Gao
 
-Function 1 name: findKthMax
+**Function 1 name:** ```findKthMax```
+
 [Function 1 commit](https://github.com/cz23in/algorithms/commit/28ed48d52d7253c67a2eb2cabfb395d8b56355de#diff-da29792920db2b60923338a5dfb1aa3ffc49101330eeec20554be3f4cfcf8735
 )
 <p align="left">
   <img src="coverage_screenshots/Rui_function1.jpg" alt="Description of the image">
 </p>
 
-<Function 2 name>
+**Function 2 name:** ```partition```
+
 [Function 2 commit](https://github.com/cz23in/algorithms/commit/715b924ffc16042cfdb923cd9af57a175c8fccc4#diff-da29792920db2b60923338a5dfb1aa3ffc49101330eeec20554be3f4cfcf8735)
 <p align="left">
   <img src="coverage_screenshots/Rui_function2.jpg" alt="Description of the image">
 </p>
 
-<Provide the same kind of information provided for Function 1>
 
 
 ## Coverage improvement
