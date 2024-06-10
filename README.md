@@ -14,9 +14,15 @@ Programming language: Java
 
 ### Existing tool
 
-<Inform the name of the existing tool that was executed and how it was executed>
+The existing tool that was executed is JaCoCo. It was executed using Maven with the following command:
+```sh
+mvn clean test jacoco:report
+```
 
-<Show the coverage results provided by the existing tool with a screenshot>
+
+the coverage results provided by the existing tool is generated in the target/site/jacoco directory.
+![image](https://github.com/cz23in/algorithms/assets/89585937/4e5e6482-49d2-470e-b817-2a1fd34553c4)
+
 
 ### Your own coverage tool
 
