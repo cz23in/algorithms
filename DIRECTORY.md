@@ -740,6 +740,7 @@
             * [FibonacciLoopTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/maths/FibonacciLoopTest.java)
             * [FibonacciNumberCheckTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/maths/FibonacciNumberCheckTest.java)
             * [FibonacciNumberGoldenRationTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/maths/FibonacciNumberGoldenRationTest.java)
+            * [FindKthNumberTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/maths/FindKthNumberTest.java)
             * [FindMaxRecursionTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/maths/FindMaxRecursionTest.java)
             * [FindMaxTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/maths/FindMaxTest.java)
             * [FindMinRecursionTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/maths/FindMinRecursionTest.java)
