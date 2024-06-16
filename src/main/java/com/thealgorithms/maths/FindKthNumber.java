@@ -45,7 +45,7 @@ public final class FindKthNumber {
         coverageMap.put("for_loop.if.1", false);
     }
 
-    private static int[] generateArray(int capacity) {
+    public static int[] generateArray(int capacity) {
         int size = RANDOM.nextInt(capacity) + 1;
         int[] array = new int[size];
 
@@ -55,7 +55,7 @@ public final class FindKthNumber {
         return array;
     }
 
-    private static int findKthMax(int[] nums, int k) {
+    public static int findKthMax(int[] nums, int k) {
         int start = 0;
         int end = nums.length;
         while (start < end) {
@@ -75,7 +75,7 @@ public final class FindKthNumber {
         return -1;
     }
 
-    private static int partition(int[] nums, int start, int end) {
+    public static int partition(int[] nums, int start, int end) {
         int pivot = nums[start];
         int j = start;
         for (int i = start + 1; i < end; i++) {
