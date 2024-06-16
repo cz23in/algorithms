@@ -60,4 +60,17 @@ class FindKthNumberTest {
         assertEquals(34, FindKthNumber.findKthMax(numsWithDuplicates, 8));
         assertEquals(-35, FindKthNumber.findKthMax(numsWithDuplicates, 4));
     }
+
+    @Test
+    void testPartition_ValidArray_CorrectPartitioning() {
+        int[] nums = {-86, 34, -83, -5, -85, -22, 42, 39, -35, -67};
+        int pivotIndex = FindKthNumber.partition(nums, 0, nums.length);
+
+        for (int i = 0; i < pivotIndex; i++) {
+            assertTrue(nums[i] < nums[pivotIndex]);
+        }
+        for (int i = pivotIndex + 1; i < nums.length; i++) {
+            assertTrue(nums[i] >= nums[pivotIndex]);
+        }
+    }
 }
