@@ -77,7 +77,7 @@ public final class FastInverseSqrt {
     }
 
     /**
-     * Returns the inverse square root of the given number upto 14 - 16 decimal places.
+     * Returns the inversee square root of the given number upto 14 - 16 decimal places.
      * calculates the inverse square root of the given number and returns true if calculated answer
      * matches with given answer else returns false
      */

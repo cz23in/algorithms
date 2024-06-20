@@ -7,6 +7,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 public class FastInverseSqrtTests {
 
+    /* clear the coverage before each test */
     @BeforeEach
     void clearCoverage() {
         FastInverseSqrt.resetCoverage();
