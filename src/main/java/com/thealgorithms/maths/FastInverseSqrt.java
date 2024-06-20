@@ -8,12 +8,26 @@
 /** Wikipedia Link - https://en.wikipedia.org/wiki/Fast_inverse_square_root */
 
 package com.thealgorithms.maths;
+import java.util.HashMap;
 
 public final class FastInverseSqrt {
+
     private FastInverseSqrt() {
+    }
+    private static final HashMap<String, Boolean> coverageMap = new HashMap<>();
+
+    static {
+        // Initialize coverage tracking map for all branches
+        coverageMap.put("inverseSqrt.float", false);
+        coverageMap.put("inverseSqrt.double", false);
+        coverageMap.put("inverseSqrt.double.for1", false);
     }
 
     public static boolean inverseSqrt(float number) {
+        // Coverage tracking
+
+        coverageMap.put("inverseSqrt.float", true);
+
         float x = number;
         float xhalf = 0.5f * x;
         int i = Float.floatToIntBits(x);
@@ -30,22 +44,45 @@ public final class FastInverseSqrt {
      */
 
     public static boolean inverseSqrt(double number) {
+        // Coverage tracking
+        coverageMap.put("inverseSqrt.double", true);
+
         double x = number;
         double xhalf = 0.5d * x;
         long i = Double.doubleToLongBits(x);
         i = 0x5fe6ec85e7de30daL - (i >> 1);
         x = Double.longBitsToDouble(i);
+
         for (int it = 0; it < 4; it++) {
+
             x = x * (1.5d - xhalf * x * x);
+            coverageMap.put("inverseSqrt.double.for1", true);
         }
+
         x *= number;
         return x == 1 / Math.sqrt(number);
     }
+
+    public static void printCoverage(String testName) {
+        System.out.println("Coverage for test: " + testName + ":");
+        for (String branch : coverageMap.keySet()) {
+            System.out.println(branch + " was " + (coverageMap.get(branch) ? "hit" : "not hit"));
+        }
+    }
+
+    public static void resetCoverage() {
+        coverageMap.put("inverseSqrt.float", false);
+        coverageMap.put("inverseSqrt.double", false);
+        coverageMap.put("inverseSqrt.double.for1", false);
+    }
+
     /**
      * Returns the inverse square root of the given number upto 14 - 16 decimal places.
      * calculates the inverse square root of the given number and returns true if calculated answer
      * matches with given answer else returns false
      */
+
+
 }
 /**
  * OUTPUT :
