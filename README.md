@@ -52,6 +52,22 @@ https://github.com/cz23in/algorithms/commit/cf4db03aff7a10914858adac5313b8dd874c
   <img src="coverage_screenshots/Rui/Rui_function2.jpg" alt="Description of the image">
 </p>
 
+### Ciaran Edmundson
+
+**Function 1 name:** ```isVampireNumber```
+
+[Function 1 commit](https://github.com/cz23in/algorithms/commit/3fa27f267f77cb0c682ac41743f391970dd958fa)
+
+<p align="left">
+  <img src="coverage_screenshots/Ciaran/isVampire.png" alt="Description of the image">
+</p>
+
+**Function 2 name:** ```splitIntoDigits```
+
+[Function 2 commit](https://github.com/cz23in/algorithms/commit/3fa27f267f77cb0c682ac41743f391970dd958fa)
+<p align="left">
+  <img src="coverage_screenshots/Ciaran/splitDigits.png" alt="Description of the image">
+</p>
 
 
 ## Coverage improvement
@@ -134,8 +150,56 @@ The initial branch coverage was 0%, since there were no tests. After adding new 
     - `if (nums[i] < pivot)`: Covered by the same test case, ensuring the partition logic is validated.
 
 
+### Ciaran Edmundson
 
+**Test 1:** ```isVampireNumber```
 
+[Test 1 commit](https://github.com/cz23in/algorithms/commit/9dec24942ae6bf86262d8b731bfd891427943140)
+<p align="left">
+  <img src="coverage_screenshots/Ciaran/beforeChanges.png" alt="screenshot of the old coverage results">
+</p>
+<p align="left">
+  <img src="coverage_screenshots/Ciaran/afterChanges.png" alt="screenshot of the new coverage results">
+</p>
+
+There was no branch coverage as there were no automated test cases. After adding new cases, the branch coverage of `isVampireNumber` function shows as 83%.
+
+`isVampireNumber` Method Branches:
+1. **First if Condition** (`noPseudoVamireNumbers`):
+
+This branch is covered by the `testIsVampireNumber_NoPseudoVampireNumbers_True` and `testIsVampireNumber_NoPseudoVampireNumbers_False` test cases.
+
+2. **Second if Condition** `(a * 10 <= b || b * 10 <= a)`:
+
+This branch is specifically covered by the `testIsVampireNumber_HitInnerIf` test case, which provides inputs that satisfy the condition `a * 10 <= b || b * 10 <= a`.
+
+3. **Return true/false:**
+
+The return paths are validated by multiple test cases, ensuring both true and false results are handled correctly:
+`testIsVampireNumber_False`
+`testIsVampireNumber_NoPseudoVampireNumbers_True`
+`testIsVampireNumber_NoPseudoVampireNumbers_False`
+`testIsVampireNumber_HitInnerIf`
+
+**Test 2:** ```splitIntoDigits```
+
+[Test 1 commit](https://github.com/cz23in/algorithms/commit/9dec24942ae6bf86262d8b731bfd891427943140)
+<p align="left">
+  <img src="coverage_screenshots/Ciaran/beforeChanges.png" alt="screenshot of the old coverage results">
+</p>
+<p align="left">
+  <img src="coverage_screenshots/Ciaran/afterChanges.png" alt="screenshot of the new coverage results">
+</p>
+
+There was no branch coverage as there were no automated test cases. After adding new cases, the branch coverage of `splitIntoDigits` function shows as 100%.
+
+`splitIntoDigits` Method Branches:
+1. **While Loops** `(while num > 0 and while num2 > 0)`:
+
+The loops are covered by the `testSplitIntoDigits` test case
+
+2. **Extra** 
+All test cases for isVampireNumber except `testIsVampireNumber_HitInnerIf` cover this function as well, as it calls it.
 ### Overall
 
 <Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
@@ -143,5 +207,15 @@ The initial branch coverage was 0%, since there were no tests. After adding new 
 <Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
 
 ## Statement of individual contributions
+**Ciaran Edmundson**
+1. Branch Coverage Instrumentation: 
+   - Added branch coverage instrumentation to the VampireNumber class. I added a `coverageMap` datastructure and 2 functions`printCoverage()`, `resetCoverage()` to ensure all branches were tracked.
+2. Test Case Development: 
+   - Created test cases to ensure branches within the `isVampireNumber` and `splitIntoDigits` functions were covered.
+3. Coverage Reporting: 
+   - Implemented functions to print and and reset coverage, to ensure the map is reset between each test. (other team members did it differently)
+4. Existing Coverage Tool
+   - I initially experimented with Intellij's built in coverage tool, which doesn't show branch coverage by default so I had to figure that out. I then switched to Jacoco as it shows individual function coverage compared to Intellij's
 
-<Write what each group member did>
+   
+   <Write what each group member did>
