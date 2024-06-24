@@ -32,13 +32,13 @@ the coverage results provided by the existing tool is generated in the target/si
 
 https://github.com/cz23in/algorithms/commit/edb11906d30e593c1f0e19ac5f7192e9107e5c61
 
-![](coverage_screenshots/adam_own_tool_function_1.png)
+![](coverage_screenshots/Adam/adam_own_tool_function_1.png)
 
 ```NextSmallerElement.findNextSmallerElements```
 
 https://github.com/cz23in/algorithms/commit/d7648dcc9e7969a5000e19f8e5c5308e34ccc59a
 
-![](coverage_screenshots/adam_own_tool_function_2.png)
+![](coverage_screenshots/Adam/adam_own_tool_function_2.png)
 
 ### Rui Gao
 
@@ -104,10 +104,10 @@ Test 1: ```UnionFind.union```
 https://github.com/cz23in/algorithms/commit/2b06f4043370ff777fa9b1e55df55761c4f412c5
 
 Before:
-![](coverage_screenshots/adam_improvement_function_1_before.png)
+![](coverage_screenshots/Adam/adam_improvement_function_1_before.png)
 
 After:
-![](coverage_screenshots/adam_improvement_function_1_after.png)
+![](coverage_screenshots/Adam/adam_improvement_function_1_after.png)
 
 From a visual inspection of the before and after screenshots, a 5% improvement in method coverage is observed as well as a 3% improvement in line coverage.
 
@@ -120,10 +120,10 @@ Test 2: ```NextSmallerElement.findNextSmallerElements```
 https://github.com/cz23in/algorithms/commit/6699363f58cc2be2a44d61c439f9e2f0110f6139
 
 Before:
-![](coverage_screenshots/adam_improvement_function_2_before.png)
+![](coverage_screenshots/Adam/adam_improvement_function_2_before.png)
 
 After:
-![](coverage_screenshots/adam_improvement_function_2_after.png)
+![](coverage_screenshots/Adam/adam_improvement_function_2_after.png)
 
 From a visual inspection of the before and after screenshots, a 2% improvement in method coverage is observed as well as a 7% improvement in line coverage.
 
