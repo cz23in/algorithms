@@ -99,7 +99,23 @@ https://github.com/cz23in/algorithms/commit/d7648dcc9e7969a5000e19f8e5c5308e34cc
 
 #### Adam Atchia
 
-Test 1: ```NextSmallerElement.findNextSmallerElements```
+Test 1: ```UnionFind.union```
+
+https://github.com/cz23in/algorithms/commit/2b06f4043370ff777fa9b1e55df55761c4f412c5
+
+Before:
+![](coverage_screenshots/adam_improvement_function_1_before.png)
+
+After:
+![](coverage_screenshots/adam_improvement_function_1_after.png)
+
+From a visual inspection of the before and after screenshots, a 5% improvement in method coverage is observed as well as a 3% improvement in line coverage.
+
+These are attributed to no existing test cases being present and a test case being added.
+
+
+
+Test 2: ```NextSmallerElement.findNextSmallerElements```
 
 https://github.com/cz23in/algorithms/commit/6699363f58cc2be2a44d61c439f9e2f0110f6139
 
