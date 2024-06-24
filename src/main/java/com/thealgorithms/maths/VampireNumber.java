@@ -2,6 +2,7 @@ package com.thealgorithms.maths;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 /**
  * n number theory, a vampire number (or true vampire number) is a composite
@@ -19,6 +20,22 @@ import java.util.Collections;
 public final class VampireNumber {
     private VampireNumber() {
     }
+
+    private static final HashMap<String, Boolean> coverageMap = new HashMap<>();
+
+
+    static {
+        // Initialize coverage tracking map for all branches
+        coverageMap.put("isVampireNumber.if_1", false);
+        coverageMap.put("isVampireNumber.if_2", false);
+        coverageMap.put("isVampireNumber.else_2", false);
+        coverageMap.put("isVampireNumber.else_1", false);
+        coverageMap.put("splitIntoDigits.while_1", false);
+        coverageMap.put("splitIntoDigits.while_2", false);
+
+
+    }
+
 
     public static void main(String[] args) {
         test(10, 1000);
@@ -44,10 +61,19 @@ public final class VampireNumber {
     static boolean isVampireNumber(int a, int b, boolean noPseudoVamireNumbers) {
         // this is for pseudoVampireNumbers  pseudovampire number need not be of length n/2 digits
         // for example 126 = 6 x 21
-        if (noPseudoVamireNumbers) {
-            if (a * 10 <= b || b * 10 <= a) {
+
+        if (noPseudoVamireNumbers) { // coverage id = 1
+            coverageMap.put("isVampireNumber.if_1", true);
+
+            if (a * 10 <= b || b * 10 <= a) { // coverage id = 2
+                coverageMap.put("isVampireNumber.if_2", true);
                 return false;
+            } else {
+                coverageMap.put("isVampireNumber.else_2", true);
             }
+
+        } else {
+            coverageMap.put("isVampireNumber.else_1", true);
         }
 
         String mulDigits = splitIntoDigits(a * b, 0);
@@ -64,10 +90,12 @@ public final class VampireNumber {
         while (num > 0) {
             digits.add(num % 10);
             num /= 10;
+            coverageMap.put("splitIntoDigits.while_1", true);
         }
         while (num2 > 0) {
             digits.add(num2 % 10);
             num2 /= 10;
+            coverageMap.put("splitIntoDigits.while_2", true);
         }
         Collections.sort(digits);
         for (int i : digits) {
@@ -75,5 +103,21 @@ public final class VampireNumber {
         }
 
         return res.toString();
+    }
+
+    public static void printCoverage() {
+        System.out.println("Coverage results: ");
+        for (String branch : coverageMap.keySet()) {
+            System.out.println(branch + " reached: " + (coverageMap.get(branch) ? "true" : "false"));
+        }
+    }
+
+    public static void resetCoverage() {
+        coverageMap.put("isVampireNumber.if_1", false);
+        coverageMap.put("isVampireNumber.if_2", false);
+        coverageMap.put("isVampireNumber.else_2", false);
+        coverageMap.put("isVampireNumber.else_1", false);
+        coverageMap.put("splitIntoDigits.while_1", false);
+        coverageMap.put("splitIntoDigits.while_2", false);
     }
 }
