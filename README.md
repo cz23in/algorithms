@@ -97,14 +97,21 @@ https://github.com/cz23in/algorithms/commit/d7648dcc9e7969a5000e19f8e5c5308e34cc
 
 <Provide the same kind of information provided for Test 1>
 
-Adam Atchia
+#### Adam Atchia
 
-Test 1: ```testHowManyTimesRotated```
+Test 1: ```NextSmallerElement.findNextSmallerElements```
 
-![](coverage_screenshots/original.png)
+https://github.com/cz23in/algorithms/commit/6699363f58cc2be2a44d61c439f9e2f0110f6139
 
-To work on
+Before:
+![](coverage_screenshots/adam_improvement_function_2_before.png)
 
+After:
+![](coverage_screenshots/adam_improvement_function_2_after.png)
+
+From a visual inspection of the before and after screenshots, a 2% improvement in method coverage is observed as well as a 7% improvement in line coverage.
+
+These are attributed to no existing test cases being present and a test case being added.
 
 ### Rui Gao
 
