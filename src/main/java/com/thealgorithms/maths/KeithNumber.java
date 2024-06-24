@@ -10,13 +10,15 @@ final class KeithNumber {
     private KeithNumber() {
     }
 
-    // user-defined function that checks if the given number is Keith or not
     private static final Map<String, Boolean> coverageMap = new HashMap<>();
 
     public static void resetCoverageMap() {
         initializeCoverageMap();
     }
 
+    public static Map<String, Boolean> getCoverageMap() {
+        return new HashMap<>(coverageMap);
+    }
 
     private static void initializeCoverageMap() {
         coverageMap.put("while_loop.1", false);
@@ -73,7 +75,6 @@ final class KeithNumber {
         }
     }
 
-    // driver code
     public static void main(String[] args) {
         initializeCoverageMap();
         Scanner in = new Scanner(System.in);
