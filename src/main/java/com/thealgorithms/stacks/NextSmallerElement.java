@@ -38,12 +38,16 @@ import java.util.Stack;
  */
 
 public final class NextSmallerElement {
+
+    public static NextSmallerElementCoverage coverage = new NextSmallerElementCoverage();
     private NextSmallerElement() {
     }
 
     public static int[] findNextSmallerElements(int[] array) {
+        coverage.reached("fnse");
         // base case
         if (array == null) {
+            coverage.reached("fnse.if1");
             return array;
         }
         Stack<Integer> stack = new Stack<>();
@@ -51,10 +55,16 @@ public final class NextSmallerElement {
         Arrays.fill(result, -1);
 
         for (int i = 0; i < array.length; i++) {
-            while (!stack.empty() && stack.peek() >= array[i]) stack.pop();
+            coverage.reached("fnse.forloop1");
+            while (!stack.empty() && stack.peek() >= array[i]) {
+                coverage.reached("fnse.forloop1.whileloop");
+                stack.pop();
+            }
             if (stack.empty()) {
+                coverage.reached("fnse.forloop1.if1");
                 result[i] = -1;
             } else {
+                coverage.reached("fnse.forloop1.if2");
                 result[i] = stack.peek();
             }
             stack.push(array[i]);
