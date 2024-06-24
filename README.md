@@ -74,6 +74,22 @@ https://github.com/cz23in/algorithms/commit/d7648dcc9e7969a5000e19f8e5c5308e34cc
   <img src="coverage_screenshots/Ciaran/splitDigits.png" alt="Description of the image">
 </p>
 
+### Xueqi Zhang
+
+**Function 1 name:** ```isKeith```
+
+[Function 1 commit](https://github.com/cz23in/algorithms/commit/dddcef57e62ab9909a1361555f40260343cac512)
+<p align="left">
+  <img src="coverage_screenshots/Xueqi/Xueqi_function1.png">
+</p>
+
+**Function 2 name:** ```minimumCoins```
+
+[Function 2 commit](https://github.com/cz23in/algorithms/commit/82ff03a2379a33de2c6e7c7fb58a4a29a4ab39cb)
+<p align="left">
+  <img src="coverage_screenshots/Xueqi/Xueqi_function2.png" alt="Description of the image">
+</p>
+
 
 ## Coverage improvement
 
@@ -229,6 +245,51 @@ The loops are covered by the `testSplitIntoDigits` test case
 2. **Extra** 
 All test cases for isVampireNumber except `testIsVampireNumber_HitInnerIf` cover this function as well, as it calls it.
 ### Overall
+
+### Xueqi Zhang
+
+**Test 1:** ```KeithNumberTest```
+
+[Test 1 commit](https://github.com/cz23in/algorithms/commit/bdfeed89be8b4cd83bf16d55ae7e3df51ad87d3b#diff-7f9d72a70005fcd19f4aff8afc3f568d6004e859b926c528181e9e9cc23c3f52)
+<p align="left">
+  <img src="coverage_screenshots/Xueqi/Function1_before.png" alt="screenshot of the old coverage results">
+</p>
+<p align="left">
+  <img src="coverage_screenshots/Xueqi/Function1_after.png" alt="screenshot of the new coverage results">
+</p>
+
+The initial branch coverage was 0%, so there was no tests inside thie function. The structure of this function is not complex，so after adding new test cases, the branch coverage became 100%.
+
+
+`KeithNumberTest` Method Branches:
+1. **While Loop** & **For Loop**:
+    - Since this method is a standalone method for determining whether a number is a KeithNumber, I chose to use different inputs to see if the test could achieve full coverage under different input scenarios. Just as the results shows, the while loops and the for loop is covered by all test cases.
+    - 
+2. **is Keith & not Keith**:
+    - `if (isKeith(n))`: Covered by all the cases the input is a Keith Number.
+    - `else`: Covered by all the cases the input is a Keith Number.
+
+3. **Edge Cases**:
+    - No matter input is a large number, signed number, it does not change the coverage of tests.
+
+**Test 2:** ```minimumCoins```
+
+[Test 2 commit](https://github.com/cz23in/algorithms/commit/82ff03a2379a33de2c6e7c7fb58a4a29a4ab39cb)
+<p align="left">
+  <img src="coverage_screenshots/Xueqi/Function2_before.png" alt="screenshot of the old coverage results">
+</p>
+<p align="left">
+  <img src="coverage_screenshots/Xueqi/Function2_after.png" alt="screenshot of the new coverage results">
+</p>
+
+The initial branch coverage was 0%, since there were no tests. After adding new test cases, the branch coverage of `partition` function is 100%.
+
+`minimumCoins` Method Branches:
+1. **For Loop**:
+    - The for loop is covered by `testPartition_ValidArray_CorrectPartitioning`.
+
+2. **If Condition**:
+    - `if (nums[i] < pivot)`: Covered by the same test case, ensuring the partition logic is validated.
 
 <Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
 
