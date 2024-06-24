@@ -74,6 +74,22 @@ https://github.com/cz23in/algorithms/commit/d7648dcc9e7969a5000e19f8e5c5308e34cc
   <img src="coverage_screenshots/Ciaran/splitDigits.png" alt="Description of the image">
 </p>
 
+### Xueqi Zhang
+
+**Function 1 name:** ```isKeith```
+
+[Function 1 commit](https://github.com/cz23in/algorithms/commit/dddcef57e62ab9909a1361555f40260343cac512)
+<p align="left">
+  <img src="coverage_screenshots/Xueqi/function1.jpg" alt="Description of the image">
+</p>
+
+**Function 2 name:** ```partition```
+
+[Function 2 commit](https://github.com/cz23in/algorithms/commit/dddcef57e62ab9909a1361555f40260343cac512)
+<p align="left">
+  <img src="coverage_screenshots/Xueqi/function1.jpg" alt="Description of the image">
+</p>
+
 
 ## Coverage improvement
 
