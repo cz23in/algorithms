@@ -83,11 +83,11 @@ https://github.com/cz23in/algorithms/commit/d7648dcc9e7969a5000e19f8e5c5308e34cc
   <img src="coverage_screenshots/Xueqi/Xueqi_function1.png">
 </p>
 
-**Function 2 name:** ```partition```
+**Function 2 name:** ```minimumCoins```
 
-[Function 2 commit](https://github.com/cz23in/algorithms/commit/dddcef57e62ab9909a1361555f40260343cac512)
+[Function 2 commit](https://github.com/cz23in/algorithms/commit/82ff03a2379a33de2c6e7c7fb58a4a29a4ab39cb)
 <p align="left">
-  <img src="coverage_screenshots/Xueqi/function1.jpg" alt="Description of the image">
+  <img src="coverage_screenshots/Xueqi/Xueqi_function2.jpg" alt="Description of the image">
 </p>
 
 
@@ -276,19 +276,19 @@ The initial branch coverage was 0%, so there was no tests inside thie function. 
 3. **Edge Cases**:
     - No matter input is a large number, signed number, it does not change the coverage of tests.
 
-**Test 2:** ```partition```
+**Test 2:** ```minimumCoins```
 
-[Test 2 commit](https://github.com/cz23in/algorithms/commit/73176bb742580da64c740d725919cfa8c68feb81)
+[Test 2 commit](https://github.com/cz23in/algorithms/commit/82ff03a2379a33de2c6e7c7fb58a4a29a4ab39cb)
 <p align="left">
-  <img src="coverage_screenshots/Rui/old_coverage_results_FKN.jpg" alt="screenshot of the old coverage results">
+  <img src="coverage_screenshots/Xueqi/Function2_before" alt="screenshot of the old coverage results">
 </p>
 <p align="left">
-  <img src="coverage_screenshots/Rui/new_coverage_results_FKN.jpg" alt="screenshot of the new coverage results">
+  <img src="coverage_screenshots/Xueqi/Function2_after" alt="screenshot of the new coverage results">
 </p>
 
 The initial branch coverage was 0%, since there were no tests. After adding new test cases, the branch coverage of `partition` function is 100%.
 
-`partition` Method Branches:
+`minimumCoins` Method Branches:
 1. **For Loop**:
     - The for loop is covered by `testPartition_ValidArray_CorrectPartitioning`.
 
