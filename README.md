@@ -34,6 +34,11 @@ https://github.com/cz23in/algorithms/commit/edb11906d30e593c1f0e19ac5f7192e9107e
 
 ![](coverage_screenshots/adam_own_tool_function_1.png)
 
+```NextSmallerElement.findNextSmallerElements```
+
+https://github.com/cz23in/algorithms/commit/d7648dcc9e7969a5000e19f8e5c5308e34ccc59a
+
+![](coverage_screenshots/adam_own_tool_function_2.png)
 
 ### Rui Gao
 
