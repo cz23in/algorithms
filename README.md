@@ -26,11 +26,11 @@ the coverage results provided by the existing tool is generated in the target/si
 
 ### Your own coverage tool
 
-Adam Atchia
+#### Adam Atchia
 
-```HowManyTimesRotated.rotated```
+```UnionFind.union```
 
-https://github.com/cz23in/algorithms/commit/cf4db03aff7a10914858adac5313b8dd874c6117
+https://github.com/cz23in/algorithms/commit/edb11906d30e593c1f0e19ac5f7192e9107e5c61
 
 ![](coverage_screenshots/adam_own_tool_function_1.png)
 
