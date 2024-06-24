@@ -3,12 +3,29 @@ package com.thealgorithms.maths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
 
 final class KeithNumber {
     private KeithNumber() {
     }
 
     // user-defined function that checks if the given number is Keith or not
+    private static final Map<String, Boolean> coverageMap = new HashMap<>();
+
+    public static void resetCoverageMap() {
+        initializeCoverageMap();
+    }
+
+
+    private static void initializeCoverageMap() {
+        coverageMap.put("while_loop.1", false);
+        coverageMap.put("while_loop.2", false);
+        coverageMap.put("for_loop.1", false);
+        coverageMap.put("if.1", false);
+        coverageMap.put("else.1", false);
+    }
+
     static boolean isKeith(int x) {
         // List stores all the digits of the X
         ArrayList<Integer> terms = new ArrayList<>();
@@ -17,6 +34,7 @@ final class KeithNumber {
         int n = 0;
         // executes until the condition becomes false
         while (temp > 0) {
+            coverageMap.put("while_loop.1", true);
             // determines the last digit of the number and add it to the List
             terms.add(temp % 10);
             // removes the last digit
@@ -31,10 +49,12 @@ final class KeithNumber {
         // finds next term for the series
         // loop executes until the condition returns true
         while (nextTerm < x) {
+            coverageMap.put("while_loop.2", true);
             nextTerm = 0;
             // next term is the sum of previous n terms (it depends on number of digits the number
             // has)
             for (int j = 1; j <= n; j++) {
+                coverageMap.put("for_loop.1", true);
                 nextTerm = nextTerm + terms.get(i - j);
             }
             terms.add(nextTerm);
@@ -46,15 +66,26 @@ final class KeithNumber {
         return (nextTerm == x);
     }
 
+    public static void printCoverageResults() {
+        System.out.println("Coverage Results:");
+        for (Map.Entry<String, Boolean> entry : coverageMap.entrySet()) {
+            System.out.println("Branch: " + entry.getKey() + " Reached: " + entry.getValue());
+        }
+    }
+
     // driver code
     public static void main(String[] args) {
+        initializeCoverageMap();
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         if (isKeith(n)) {
+            coverageMap.put("if.1", true);
             System.out.println("Yes, the given number is a Keith number.");
         } else {
+            coverageMap.put("else.1", true);
             System.out.println("No, the given number is not a Keith number.");
         }
+        printCoverageResults();
         in.close();
     }
 }
