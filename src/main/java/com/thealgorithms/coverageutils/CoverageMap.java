@@ -18,11 +18,19 @@ public class CoverageMap {
     public void print() {
         System.out.println("\n*** COVERAGE REPORT ***");
         for (Map.Entry<String, Boolean> e : coverage.entrySet()) {
-            System.out.println(e.getKey() + " was reached? " + e.getValue());
+            System.out.println(
+                    String.format("%-25s", e.getKey()) + e.getValue()
+            );
         }
     }
 
     public void addDefaultValues() {}
 
-    public void set(String name) {}
+    public void reached(String name) {
+        coverage.put(name, true);
+    }
+
+    public void expectFunction(String name) {
+        coverage.put(name, false);
+    }
 }
