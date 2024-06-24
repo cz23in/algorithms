@@ -250,6 +250,51 @@ All test cases for isVampireNumber except `testIsVampireNumber_HitInnerIf` cover
 
 <Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
 
+### Xueqi Zhang
+
+**Test 1:** ```KeithNumberTest```
+
+[Test 1 commit](https://github.com/cz23in/algorithms/commit/bdfeed89be8b4cd83bf16d55ae7e3df51ad87d3b#diff-7f9d72a70005fcd19f4aff8afc3f568d6004e859b926c528181e9e9cc23c3f52)
+<p align="left">
+  <img src="coverage_screenshots/Xueqi/Function1_before.png" alt="screenshot of the old coverage results">
+</p>
+<p align="left">
+  <img src="coverage_screenshots/Xueqi/Function1_after.png" alt="screenshot of the new coverage results">
+</p>
+
+The initial branch coverage was 0%, so there was no tests inside thie function. The structure of this function is not complex，so after adding new test cases, the branch coverage became 100%.
+
+
+`KeithNumberTest` Method Branches:
+1. **While Loop** & **For Loop**:
+    - Since this method is a standalone method for determining whether a number is a KeithNumber, I chose to use different inputs to see if the test could achieve full coverage under different input scenarios. Just as the results shows, the while loops and the for loop is covered by all test cases.
+    - 
+2. **is Keith & not Keith**:
+    - `if (isKeith(n))`: Covered by all the cases the input is a Keith Number.
+    - `else`: Covered by all the cases the input is a Keith Number.
+
+3. **Edge Cases**:
+    - No matter input is a large number, signed number, it does not change the coverage of tests.
+
+**Test 2:** ```partition```
+
+[Test 2 commit](https://github.com/cz23in/algorithms/commit/73176bb742580da64c740d725919cfa8c68feb81)
+<p align="left">
+  <img src="coverage_screenshots/Rui/old_coverage_results_FKN.jpg" alt="screenshot of the old coverage results">
+</p>
+<p align="left">
+  <img src="coverage_screenshots/Rui/new_coverage_results_FKN.jpg" alt="screenshot of the new coverage results">
+</p>
+
+The initial branch coverage was 0%, since there were no tests. After adding new test cases, the branch coverage of `partition` function is 100%.
+
+`partition` Method Branches:
+1. **For Loop**:
+    - The for loop is covered by `testPartition_ValidArray_CorrectPartitioning`.
+
+2. **If Condition**:
+    - `if (nums[i] < pivot)`: Covered by the same test case, ensuring the partition logic is validated.
+
 ## Statement of individual contributions
 **Ciaran Edmundson**
 1. Branch Coverage Instrumentation: 
