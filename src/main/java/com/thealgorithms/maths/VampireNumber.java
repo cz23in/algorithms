@@ -28,8 +28,11 @@ public final class VampireNumber {
         // Initialize coverage tracking map for all branches
         coverageMap.put("isVampireNumber.if_1", false);
         coverageMap.put("isVampireNumber.if_2", false);
+        coverageMap.put("isVampireNumber.else_2", false);
+        coverageMap.put("isVampireNumber.else_1", false);
         coverageMap.put("splitIntoDigits.while_1", false);
         coverageMap.put("splitIntoDigits.while_2", false);
+
 
     }
 
@@ -58,13 +61,19 @@ public final class VampireNumber {
     static boolean isVampireNumber(int a, int b, boolean noPseudoVamireNumbers) {
         // this is for pseudoVampireNumbers  pseudovampire number need not be of length n/2 digits
         // for example 126 = 6 x 21
-        if (noPseudoVamireNumbers) {
+
+        if (noPseudoVamireNumbers) { // coverage id = 1
             coverageMap.put("isVampireNumber.if_1", true);
 
-            if (a * 10 <= b || b * 10 <= a) {
+            if (a * 10 <= b || b * 10 <= a) { // coverage id = 2
                 coverageMap.put("isVampireNumber.if_2", true);
                 return false;
+            } else {
+                coverageMap.put("isVampireNumber.else_2", true);
             }
+
+        } else {
+            coverageMap.put("isVampireNumber.else_1", true);
         }
 
         String mulDigits = splitIntoDigits(a * b, 0);
@@ -106,6 +115,8 @@ public final class VampireNumber {
     public static void resetCoverage() {
         coverageMap.put("isVampireNumber.if_1", false);
         coverageMap.put("isVampireNumber.if_2", false);
+        coverageMap.put("isVampireNumber.else_2", false);
+        coverageMap.put("isVampireNumber.else_1", false);
         coverageMap.put("splitIntoDigits.while_1", false);
         coverageMap.put("splitIntoDigits.while_2", false);
     }
