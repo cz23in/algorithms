@@ -65,6 +65,7 @@ final class KeithNumber {
         // when the control comes out of the while loop, there will be two conditions:
         // either nextTerm will be equal to x or greater than x
         // if equal, the given number is Keith, else not
+        printCoverageResults();
         return (nextTerm == x);
     }
 
@@ -86,7 +87,7 @@ final class KeithNumber {
             coverageMap.put("else.1", true);
             System.out.println("No, the given number is not a Keith number.");
         }
-        printCoverageResults();
+
         in.close();
     }
 }

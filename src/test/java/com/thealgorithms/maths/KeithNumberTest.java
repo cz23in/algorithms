@@ -21,16 +21,19 @@ public class KeithNumberTest {
 
     @Test
     public void testSignedCases() {
+        KeithNumber.isKeith(-10);
         assertTrue(!KeithNumber.isKeith(-10), "-10 should not be a Keith number");
     }
 
     @Test
     public void testLargeKeithNumber() {
+        KeithNumber.isKeith(31331);
         assertTrue(KeithNumber.isKeith(31331), "31331 should be a Keith number");
     }
 
     @Test
     public void testRandomNumber() {
+        KeithNumber.isKeith(1137);
         assertTrue(KeithNumber.isKeith(742), "742 should be a Keith number");
     }
 }
