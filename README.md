@@ -87,7 +87,7 @@ https://github.com/cz23in/algorithms/commit/d7648dcc9e7969a5000e19f8e5c5308e34cc
 
 [Function 2 commit](https://github.com/cz23in/algorithms/commit/82ff03a2379a33de2c6e7c7fb58a4a29a4ab39cb)
 <p align="left">
-  <img src="coverage_screenshots/Xueqi/Xueqi_function2.jpg" alt="Description of the image">
+  <img src="coverage_screenshots/Xueqi/Xueqi_function2.png" alt="Description of the image">
 </p>
 
 
@@ -280,10 +280,10 @@ The initial branch coverage was 0%, so there was no tests inside thie function. 
 
 [Test 2 commit](https://github.com/cz23in/algorithms/commit/82ff03a2379a33de2c6e7c7fb58a4a29a4ab39cb)
 <p align="left">
-  <img src="coverage_screenshots/Xueqi/Function2_before" alt="screenshot of the old coverage results">
+  <img src="coverage_screenshots/Xueqi/Function2_before.png" alt="screenshot of the old coverage results">
 </p>
 <p align="left">
-  <img src="coverage_screenshots/Xueqi/Function2_after" alt="screenshot of the new coverage results">
+  <img src="coverage_screenshots/Xueqi/Function2_after.png" alt="screenshot of the new coverage results">
 </p>
 
 The initial branch coverage was 0%, since there were no tests. After adding new test cases, the branch coverage of `partition` function is 100%.
