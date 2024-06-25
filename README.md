@@ -145,6 +145,7 @@ From a visual inspection of the before and after screenshots, a 2% improvement i
 
 These are attributed to no existing test cases being present and a test case being added.
 
+
 ### Rui Gao
 
 **Test 1:** ```findKthMax```
@@ -262,19 +263,18 @@ All test cases for isVampireNumber except `testIsVampireNumber_HitInnerIf` cover
   <img src="coverage_screenshots/Xueqi/Function1_after.png" alt="screenshot of the new coverage results">
 </p>
 
-The initial branch coverage was 0%, so there was no tests inside thie function. The structure of this function is not complex，so after adding new test cases, the branch coverage became 100%.
+Coverage Improvements: The initial branch coverage was 0%, so there was no tests inside thie function. The structure of this function is not complex，so after adding new test cases, the branch coverage became 100%.
 
-
-`KeithNumberTest` Method Branches:
-1. **While Loop** & **For Loop**:
+`KeithNumberTest` :
+1. **Basic coverage tests for the loops**:
     - Since this method is a standalone method for determining whether a number is a KeithNumber, I chose to use different inputs to see if the test could achieve full coverage under different input scenarios. Just as the results shows, the while loops and the for loop is covered by all test cases.
     - 
-2. **is Keith & not Keith**:
-    - `if (isKeith(n))`: Covered by all the cases the input is a Keith Number.
-    - `else`: Covered by all the cases the input is a Keith Number.
+2. **Coverage test for the if statements**:
+    - `if.1`: Covered by all the cases the input is a Keith Number.
+    - `else.1`: Covered by all the cases the input is a Keith Number.
 
 3. **Edge Cases**:
-    - No matter input is a large number, signed number, it does not change the coverage of tests.
+    - No matter input is a large number, signed number, it does not change the coverage.
 
 **Test 2:** ```minimumCoins```
 
@@ -286,14 +286,19 @@ The initial branch coverage was 0%, so there was no tests inside thie function. 
   <img src="coverage_screenshots/Xueqi/Function2_after.png" alt="screenshot of the new coverage results">
 </p>
 
-The initial branch coverage was 0%, since there were no tests. After adding new test cases, the branch coverage of `partition` function is 100%.
+The initial branch coverage was 0%, there were no tests for this function. After adding new test cases, the branch coverage of `minimumCoins` function is 100%.
 
 `minimumCoins` Method Branches:
-1. **For Loop**:
-    - The for loop is covered by `testPartition_ValidArray_CorrectPartitioning`.
+1. **Basic coverage tests for the loops**:
+    - This method is also a standalone method for calculation, so I still use different inputs to see if the test could achieve full coverage under different input scenarios. Just as the results shows, the three for loops is covered by all test cases.
 
-2. **If Condition**:
-    - `if (nums[i] < pivot)`: Covered by the same test case, ensuring the partition logic is validated.
+2. **Coverage test for the inner if statements**:
+    - `if.1`: Covered by the same test case, ensuring the partition logic is validated.
+    - `if.2`: Covered by the same test case, ensuring the partition logic is validated.
+      
+3. **Edge Cases**:
+    - In this case, egde cases can be when there is no result for the calculation (output zero) or there are less than 3 inputs. There are 3 methods for test edge cases, and just as the results shows, they does not change the coverage.
+  
 
 ## Statement of individual contributions
 **Ciaran Edmundson**
