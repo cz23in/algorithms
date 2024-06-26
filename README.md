@@ -302,13 +302,23 @@ The initial branch coverage was 0%, there were no tests for this function. After
 <Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
 
 ## Statement of individual contributions
+**Rui Gao**
+1. Find projects:
+   - Found few projects that meet the requirements, but we did not choose them in the end.
+2. Coverage Measurement:
+   - Using existing tool JaCoCo to show the overall coverage results.
+3. Branch Coverage Instrumentation:
+   - Added branch coverage instrumentation to the `FindKthNumber` class, by using `Map` interface and put a flag (a boolean value in this case) in each branch to ensure all branches were tracked for function `findKthMax` and `partition`.
+4. Test Case Development:
+   - Created a test file `FindKthNumerTest` to ensure branches within the `findKthMax` and `partition` functions were covered.
+
 **Ciaran Edmundson**
 1. Branch Coverage Instrumentation: 
    - Added branch coverage instrumentation to the VampireNumber class. I added a `coverageMap` datastructure and 2 functions`printCoverage()`, `resetCoverage()` to ensure all branches were tracked.
 2. Test Case Development: 
    - Created test cases to ensure branches within the `isVampireNumber` and `splitIntoDigits` functions were covered.
 3. Coverage Reporting: 
-   - Implemented functions to print and and reset coverage, to ensure the map is reset between each test. (other team members did it differently)
+   - Implemented functions to print and reset coverage, to ensure the map is reset between each test. (other team members did it differently)
 4. Existing Coverage Tool
    - I initially experimented with Intellij's built in coverage tool, which doesn't show branch coverage by default so I had to figure that out. I then switched to Jacoco as it shows individual function coverage compared to Intellij's
 
