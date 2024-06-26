@@ -13,7 +13,7 @@ public final class FindKthNumber {
     }
 
     private static final Random RANDOM = new Random();
-    private static final Map<String, Boolean> coverageMap = new HashMap<>();
+    private static final Map<String, Boolean> COVERAGE_MAP = new HashMap<>();
 
     public static void main(String[] args) {
         initializeCoverageMap();
@@ -37,12 +37,12 @@ public final class FindKthNumber {
     }
 
     private static void initializeCoverageMap() {
-        coverageMap.put("while_loop.1", false);
-        coverageMap.put("while.if.1", false);
-        coverageMap.put("while.if.2", false);
-        coverageMap.put("while.if.3", false);
-        coverageMap.put("for_loop.1", false);
-        coverageMap.put("for_loop.if.1", false);
+        COVERAGE_MAP.put("while_loop.1", false);
+        COVERAGE_MAP.put("while.if.1", false);
+        COVERAGE_MAP.put("while.if.2", false);
+        COVERAGE_MAP.put("while.if.3", false);
+        COVERAGE_MAP.put("for_loop.1", false);
+        COVERAGE_MAP.put("for_loop.if.1", false);
     }
 
     public static int[] generateArray(int capacity) {
@@ -59,16 +59,16 @@ public final class FindKthNumber {
         int start = 0;
         int end = nums.length;
         while (start < end) {
-            coverageMap.put("while_loop.1", true);
+            COVERAGE_MAP.put("while_loop.1", true);
             int pivot = partition(nums, start, end);
             if (k == pivot) {
-                coverageMap.put("while.if.1", true);
+                COVERAGE_MAP.put("while.if.1", true);
                 return nums[pivot];
             } else if (k > pivot) {
-                coverageMap.put("while.if.2", true);
+                COVERAGE_MAP.put("while.if.2", true);
                 start = pivot + 1;
             } else {
-                coverageMap.put("while.if.3", true);
+                COVERAGE_MAP.put("while.if.3", true);
                 end = pivot;
             }
         }
@@ -79,9 +79,9 @@ public final class FindKthNumber {
         int pivot = nums[start];
         int j = start;
         for (int i = start + 1; i < end; i++) {
-            coverageMap.put("for_loop.1", true);
+            COVERAGE_MAP.put("for_loop.1", true);
             if (nums[i] < pivot) {
-                coverageMap.put("for_loop.if.1", true);
+                COVERAGE_MAP.put("for_loop.if.1", true);
                 j++;
                 swap(nums, i, j);
             }
@@ -98,7 +98,7 @@ public final class FindKthNumber {
 
     private static void printCoverageResults() {
         System.out.println("Coverage Results:");
-        for (Map.Entry<String, Boolean> entry : coverageMap.entrySet()) {
+        for (Map.Entry<String, Boolean> entry : COVERAGE_MAP.entrySet()) {
             System.out.println("Branch: " + entry.getKey() + " Reached: " + entry.getValue());
         }
     }
