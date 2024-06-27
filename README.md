@@ -274,9 +274,13 @@ The initial branch coverage was 0%, there were no tests for this function. After
 Screenshot of the old coverage results by running JaCoCo
 ![](coverage_screenshots/jacoco.jpg)
 Screenshot of the new coverage results by running JaCoCo using all test modifications made by the group
-![](coverage_screenshots/jacoco.jpg)
+![](coverage_screenshots/Rui/overall_new_coverage_results_FKN.jpg)
 
 ## Statement of individual contributions
+**Adam Atchia**
+1. I contributed by furfilling my portion of the assignment for functions UnionFind.union and NextSmallerElement. 
+2. I developed my own coverage tool and framework for reusable coverage maps, as well as improved the test cases which did not previously exist for the two functions.
+
 **Rui Gao**
 1. Find projects:
    - Found few projects that meet the requirements, but we did not choose them in the end.
@@ -297,9 +301,6 @@ Screenshot of the new coverage results by running JaCoCo using all test modifica
 4. Existing Coverage Tool
    - I initially experimented with Intellij's built in coverage tool, which doesn't show branch coverage by default so I had to figure that out. I then switched to Jacoco as it shows individual function coverage compared to Intellij's
 
-**Adam Atchia**
-I contributed by furfilling my portion of the assignment for functions UnionFind.union and NextSmallerElement. I developed my own coverage tool and framework for reusable coverage maps, as well as improved the test cases which did not previously exist for the two functions.
-
 **Xueqi Zhang**
 
 1. Branch Coverage Measurement:
@@ -308,5 +309,3 @@ I contributed by furfilling my portion of the assignment for functions UnionFind
    - Added branch coverage instrumentation to the KeithNumber and MinimumCoins classes. Introduced a coverageMap datastructure along with two functions, printCoverage() and resetCoverage(), to track all branches accurately.
 3. Test Case Development:
    - Developed comprehensive test cases for the isKeithNumber and calculateMinimumCoins functions to ensure full branch coverage. Created KeithNumberTest and MinimumCoinsTest classes for testing.
-   
-   <Write what each group member did>
