@@ -125,11 +125,7 @@ Before:
 After:
 ![](coverage_screenshots/Adam/adam_improvement_function_1_after.png)
 
-From a visual inspection of the before and after screenshots, a 5% improvement in method coverage is observed as well as a 3% improvement in line coverage.
-
-These are attributed to no existing test cases being present and a test case being added.
-
-
+The initial coverage was 0% given that a test did not previously exist. After implementing a test, the coverage has been significantly increased to 100% across most functions.
 
 Test 2: ```NextSmallerElement.findNextSmallerElements```
 
@@ -141,10 +137,7 @@ Before:
 After:
 ![](coverage_screenshots/Adam/adam_improvement_function_2_after.png)
 
-From a visual inspection of the before and after screenshots, a 2% improvement in method coverage is observed as well as a 7% improvement in line coverage.
-
-These are attributed to no existing test cases being present and a test case being added.
-
+The initial coverage was 0% given that a test did not previously exist. After implementing a test, the coverage has been significantly increased to 100% across most functions.
 ### Rui Gao
 
 **Test 1:** ```findKthMax```

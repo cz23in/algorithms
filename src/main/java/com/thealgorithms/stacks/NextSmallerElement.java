@@ -44,12 +44,14 @@ public final class NextSmallerElement {
     }
 
     public static int[] findNextSmallerElements(int[] array) {
-        coverage.reached("fnse");
         // base case
         if (array == null) {
             coverage.reached("fnse.if1");
             return array;
+        } else {
+            coverage.reached("fnse.if1.else");
         }
+
         Stack<Integer> stack = new Stack<>();
         int[] result = new int[array.length];
         Arrays.fill(result, -1);
