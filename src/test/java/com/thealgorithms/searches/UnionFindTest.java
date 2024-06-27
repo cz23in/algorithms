@@ -20,6 +20,9 @@ public class UnionFindTest {
                 uf.toString(),
                 "p [0, 1, 1, 3, 4] r [0, 1, 0, 0, 0]\n"
         );
+
+        Assertions.assertEquals(uf.count(), 4);
+
         UnionFind.coverage.print();
     }
 }
