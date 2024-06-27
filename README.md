@@ -28,15 +28,15 @@ the coverage results provided by the existing tool is generated in the target/si
 
 #### Adam Atchia
 
-```UnionFind.union```
+**Function 1 name:** ```UnionFind.union```
 
-https://github.com/cz23in/algorithms/commit/edb11906d30e593c1f0e19ac5f7192e9107e5c61
+[Function 1 commit](https://github.com/cz23in/algorithms/commit/edb11906d30e593c1f0e19ac5f7192e9107e5c61)
 
 ![](coverage_screenshots/Adam/adam_own_tool_function_1.png)
 
-```NextSmallerElement.findNextSmallerElements```
+**Function 2 name:** ```NextSmallerElement.findNextSmallerElements```
 
-https://github.com/cz23in/algorithms/commit/d7648dcc9e7969a5000e19f8e5c5308e34ccc59a
+[Function 2 commit](https://github.com/cz23in/algorithms/commit/d7648dcc9e7969a5000e19f8e5c5308e34ccc59a)
 
 ![](coverage_screenshots/Adam/adam_own_tool_function_2.png)
 
@@ -94,30 +94,11 @@ https://github.com/cz23in/algorithms/commit/d7648dcc9e7969a5000e19f8e5c5308e34cc
 ## Coverage improvement
 
 ### Individual tests
-
-<The following is supposed to be repeated for each group member>
-
-<Group member name>
-
-<Test 1>
-
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
-
-<Provide a screenshot of the old coverage results (the same as you already showed above)>
-
-<Provide a screenshot of the new coverage results>
-
-<State the coverage improvement with a number and elaborate on why the coverage is improved>
-
-<Test 2>
-
-<Provide the same kind of information provided for Test 1>
-
 #### Adam Atchia
 
 Test 1: ```UnionFind.union```
 
-https://github.com/cz23in/algorithms/commit/2b06f4043370ff777fa9b1e55df55761c4f412c5
+[Test 1 commit](https://github.com/cz23in/algorithms/commit/2b06f4043370ff777fa9b1e55df55761c4f412c5)
 
 Before:
 ![](coverage_screenshots/Adam/adam_improvement_function_1_before.png)
@@ -129,7 +110,7 @@ The initial coverage was 0% given that a test did not previously exist. After im
 
 Test 2: ```NextSmallerElement.findNextSmallerElements```
 
-https://github.com/cz23in/algorithms/commit/6699363f58cc2be2a44d61c439f9e2f0110f6139
+[Test 2 commit](https://github.com/cz23in/algorithms/commit/6699363f58cc2be2a44d61c439f9e2f0110f6139)
 
 Before:
 ![](coverage_screenshots/Adam/adam_improvement_function_2_before.png)
@@ -220,7 +201,7 @@ The return paths are validated by multiple test cases, ensuring both true and fa
 
 **Test 2:** ```splitIntoDigits```
 
-[Test 1 commit](https://github.com/cz23in/algorithms/commit/9dec24942ae6bf86262d8b731bfd891427943140)
+[Test 2 commit](https://github.com/cz23in/algorithms/commit/9dec24942ae6bf86262d8b731bfd891427943140)
 <p align="left">
   <img src="coverage_screenshots/Ciaran/beforeChanges.png" alt="screenshot of the old coverage results">
 </p>
@@ -290,9 +271,10 @@ The initial branch coverage was 0%, there were no tests for this function. After
 
 ### Overall
 
-<Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
-
-<Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
+Screenshot of the old coverage results by running JaCoCo
+![](coverage_screenshots/jacoco.jpg)
+Screenshot of the new coverage results by running JaCoCo using all test modifications made by the group
+![](coverage_screenshots/jacoco.jpg)
 
 ## Statement of individual contributions
 **Rui Gao**
