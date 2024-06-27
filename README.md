@@ -299,5 +299,14 @@ Screenshot of the new coverage results by running JaCoCo using all test modifica
 
 **Adam Atchia**
 I contributed by furfilling my portion of the assignment for functions UnionFind.union and NextSmallerElement. I developed my own coverage tool and framework for reusable coverage maps, as well as improved the test cases which did not previously exist for the two functions.
+
+**Xueqi Zhang**
+
+1. Branch Coverage Measurement:
+   - Also Used the existing tool JaCoCo to show the overall coverage results.Branch Coverage Instrumentation:
+2. Branch Coverage Instrumentation:
+   - Added branch coverage instrumentation to the KeithNumber and MinimumCoins classes. Introduced a coverageMap datastructure along with two functions, printCoverage() and resetCoverage(), to track all branches accurately.
+3. Test Case Development:
+   - Developed comprehensive test cases for the isKeithNumber and calculateMinimumCoins functions to ensure full branch coverage. Created KeithNumberTest and MinimumCoinsTest classes for testing.
    
    <Write what each group member did>
