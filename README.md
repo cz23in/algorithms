@@ -315,5 +315,7 @@ The initial branch coverage was 0%, there were no tests for this function. After
 4. Existing Coverage Tool
    - I initially experimented with Intellij's built in coverage tool, which doesn't show branch coverage by default so I had to figure that out. I then switched to Jacoco as it shows individual function coverage compared to Intellij's
 
+**Adam Atchia**
+I contributed by furfilling my portion of the assignment for functions UnionFind.union and NextSmallerElement. I developed my own coverage tool and framework for reusable coverage maps, as well as improved the test cases which did not previously exist for the two functions.
    
    <Write what each group member did>
